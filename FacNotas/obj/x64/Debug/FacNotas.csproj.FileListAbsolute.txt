@@ -1,0 +1,9 @@
+C:\Projetos\FacNotas\FacNotas\bin\x64\Debug\FacNotas.exe.config
+C:\Projetos\FacNotas\FacNotas\bin\x64\Debug\FacNotas.exe
+C:\Projetos\FacNotas\FacNotas\bin\x64\Debug\FacNotas.pdb
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.TelaPrincipal.resources
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.Properties.Resources.resources
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.csproj.GenerateResource.cache
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.csproj.CoreCompileInputs.cache
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.exe
+C:\Projetos\FacNotas\FacNotas\obj\x64\Debug\FacNotas.pdb

@@ -1,0 +1,10 @@
+C:\Projetos\FacNotas\FacNotas\bin\x64\Release\FacNotas.exe.config
+C:\Projetos\FacNotas\FacNotas\bin\x64\Release\FacNotas.exe
+C:\Projetos\FacNotas\FacNotas\bin\x64\Release\FacNotas.pdb
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.csprojAssemblyReference.cache
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.TelaPrincipal.resources
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.Properties.Resources.resources
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.csproj.GenerateResource.cache
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.csproj.CoreCompileInputs.cache
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.exe
+C:\Projetos\FacNotas\FacNotas\obj\x64\Release\FacNotas.pdb
