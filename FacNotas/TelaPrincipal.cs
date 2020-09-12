@@ -175,12 +175,12 @@ namespace FacNotas
                                 disciplinaSelecionada = txtNome.Text;
                             }
 
-                            nodeItem.SelectSingleNode("A1").InnerText = txtA1.Text;
-                            nodeItem.SelectSingleNode("A2").InnerText = txtA2.Text;
-                            nodeItem.SelectSingleNode("A3").InnerText = txtA3.Text;
-                            nodeItem.SelectSingleNode("A4").InnerText = txtA4.Text;
-                            nodeItem.SelectSingleNode("A5").InnerText = txtA5.Text;
-                            nodeItem.SelectSingleNode("A6").InnerText = txtA6.Text;
+                            nodeItem.SelectSingleNode("A1").InnerText = RetornarValorSalvar(txtA1.Text);
+                            nodeItem.SelectSingleNode("A2").InnerText = RetornarValorSalvar(txtA2.Text);
+                            nodeItem.SelectSingleNode("A3").InnerText = RetornarValorSalvar(txtA3.Text);
+                            nodeItem.SelectSingleNode("A4").InnerText = RetornarValorSalvar(txtA4.Text);
+                            nodeItem.SelectSingleNode("A5").InnerText = RetornarValorSalvar(txtA5.Text);
+                            nodeItem.SelectSingleNode("A6").InnerText = RetornarValorSalvar(txtA6.Text);
 
                             MostrarMensagem("Alterações para a disciplina " + disciplinaSelecionada + " foram salvas!", "Alterações Salvas");
 
@@ -259,8 +259,6 @@ namespace FacNotas
 
         private void CalcularNotaFinal() 
         {
-            //Color.Goldenrod;
-            //Color.LightCoral;
             if (!string.IsNullOrEmpty(txtMediaP.Text) && !string.IsNullOrEmpty(txtMediaT.Text))
             {
                 double mediaP = 0;
@@ -312,18 +310,50 @@ namespace FacNotas
                     if (disciplina.Nome == disciplinaSelecionada)
                     {
                         txtNome.Text = disciplina.Nome;
-                        txtA1.Text = disciplina.A1 >= 0 ? disciplina.A1.ToString() : "";
-                        txtA2.Text = disciplina.A2 >= 0 ? disciplina.A2.ToString() : "";
-                        txtA3.Text = disciplina.A3 >= 0 ? disciplina.A3.ToString() : "";
-                        txtA4.Text = disciplina.A4 >= 0 ? disciplina.A4.ToString() : "";
-                        txtA5.Text = disciplina.A5 >= 0 ? disciplina.A5.ToString() : "";
-                        txtA6.Text = disciplina.A6 >= 0 ? disciplina.A6.ToString() : "";
+                        txtA1.Text = RetornarValor(disciplina.A1);
+                        txtA2.Text = RetornarValor(disciplina.A2);
+                        txtA3.Text = RetornarValor(disciplina.A3);
+                        txtA4.Text = RetornarValor(disciplina.A4);
+                        txtA5.Text = RetornarValor(disciplina.A5);
+                        txtA6.Text = RetornarValor(disciplina.A6);
 
                         Calcular();
 
                         break;
                     }
                 }
+            }
+        }
+
+        private string RetornarValor(double valor) 
+        {
+            if (valor >= 0)
+            {
+                return valor.ToString();
+            }
+            else if (valor == -2)
+            {
+                return "?";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private string RetornarValorSalvar(string valor)
+        {
+            if (string.IsNullOrEmpty(valor))
+            {
+                return "";
+            }
+            else if (double.TryParse(valor, out double valorD))
+            {
+                return valor;
+            }
+            else
+            {
+                return "-2";
             }
         }
 
