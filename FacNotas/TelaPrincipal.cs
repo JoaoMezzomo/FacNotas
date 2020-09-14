@@ -22,6 +22,8 @@ namespace FacNotas
             CarregarDisciplinas();
         }
 
+        #region Métodos
+
         private void ValidarEntrada(ref TextBox txtBox) 
         {
             if (string.IsNullOrEmpty(txtBox.Text))
@@ -613,6 +615,10 @@ namespace FacNotas
             }
         }
 
+        #endregion
+
+        #region Eventos
+
         private void txtA1_TextChanged(object sender, EventArgs e)
         {
             ValidarEntrada(ref txtA1);
@@ -689,5 +695,8 @@ namespace FacNotas
         {
             Excluir();
         }
+
+        #endregion
+
     }
 }
