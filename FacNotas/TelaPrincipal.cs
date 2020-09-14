@@ -22,6 +22,50 @@ namespace FacNotas
             CarregarDisciplinas();
         }
 
+        private void ValidarEntrada(ref TextBox txtBox) 
+        {
+            if (string.IsNullOrEmpty(txtBox.Text))
+            {
+                return;
+            }
+
+            txtBox.Text = txtBox.Text.Replace(".", ",");
+
+            if (txtBox.Text.Contains("?"))
+            {
+                txtBox.Text = "?";
+            }
+            else if (txtBox.Text.Contains(","))
+            {
+                return;
+            }
+            else if (double.TryParse(txtBox.Text, out double saida))
+            {
+                double valor = Convert.ToDouble(txtBox.Text);
+
+                if (valor <= 10 && valor >= 0)
+                {
+                    txtBox.Text = valor.ToString();
+                }
+                else if (valor > 10)
+                {
+                    txtBox.Text = "10";
+                }
+                else if (valor < 0)
+                {
+                    txtBox.Text = "0";
+                }
+                else
+                {
+                    txtBox.Text = "";
+                }
+            }
+            else
+            {
+                txtBox.Text = "";
+            }
+        }
+
         private bool VerificarSeExiste(string nome) 
         {
             bool retorno = false;
@@ -114,6 +158,11 @@ namespace FacNotas
             if (listDisciplinas.SelectedIndex >= 0 && Disciplinas != null)
             {
                 string disciplinaSelecionada = listDisciplinas.SelectedItem.ToString();
+
+                if (MessageBox.Show("Tem certeza que deseja excluir a disciplina " + disciplinaSelecionada + "?" , "Tem certeza?", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
 
                 string pathData = CriarArquivoData();
 
@@ -566,24 +615,28 @@ namespace FacNotas
 
         private void txtA1_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA1);
             TrocarCor(ref txtA1);
             Calcular();
         }
 
         private void txtA2_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA2);
             TrocarCor(ref txtA2);
             Calcular();
         }
 
         private void txtA3_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA3);
             TrocarCor(ref txtA3);
             Calcular();
         }
 
         private void txtA4_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA4);
             TrocarCor(ref txtA4);
             Calcular();
         }
@@ -595,12 +648,14 @@ namespace FacNotas
 
         private void txtA5_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA5);
             TrocarCor(ref txtA5);
             Calcular();
         }
 
         private void txtA6_TextChanged(object sender, EventArgs e)
         {
+            ValidarEntrada(ref txtA6);
             TrocarCor(ref txtA6);
             Calcular();
         }
