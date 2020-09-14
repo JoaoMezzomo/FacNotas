@@ -38,6 +38,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtMensagem = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNotaFinal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -58,7 +59,6 @@
             this.txtA3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtA4 = new System.Windows.Forms.TextBox();
-            this.txtMensagem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.listDisciplinas);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 371);
+            this.panel1.Size = new System.Drawing.Size(381, 371);
             this.panel1.TabIndex = 0;
             // 
             // btnExcluir
@@ -120,7 +120,7 @@
             this.listDisciplinas.Location = new System.Drawing.Point(3, 29);
             this.listDisciplinas.Name = "listDisciplinas";
             this.listDisciplinas.ScrollAlwaysVisible = true;
-            this.listDisciplinas.Size = new System.Drawing.Size(194, 274);
+            this.listDisciplinas.Size = new System.Drawing.Size(375, 274);
             this.listDisciplinas.TabIndex = 1;
             this.listDisciplinas.SelectedIndexChanged += new System.EventHandler(this.listDisciplinas_SelectedIndexChanged);
             // 
@@ -132,7 +132,7 @@
             this.panel2.Controls.Add(this.groupBox3);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(218, 12);
+            this.panel2.Location = new System.Drawing.Point(399, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(357, 371);
             this.panel2.TabIndex = 1;
@@ -140,6 +140,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(8, 5);
+            this.txtNome.MaxLength = 41;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(339, 25);
             this.txtNome.TabIndex = 4;
@@ -169,6 +170,19 @@
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
+            // 
+            // txtMensagem
+            // 
+            this.txtMensagem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMensagem.Location = new System.Drawing.Point(3, 170);
+            this.txtMensagem.Name = "txtMensagem";
+            this.txtMensagem.ReadOnly = true;
+            this.txtMensagem.Size = new System.Drawing.Size(105, 18);
+            this.txtMensagem.TabIndex = 15;
+            this.txtMensagem.TabStop = false;
+            this.txtMensagem.Text = "Mensagem";
+            this.txtMensagem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -375,24 +389,11 @@
             this.txtA4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtA4.TextChanged += new System.EventHandler(this.txtA4_TextChanged);
             // 
-            // txtMensagem
-            // 
-            this.txtMensagem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMensagem.Location = new System.Drawing.Point(3, 170);
-            this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.ReadOnly = true;
-            this.txtMensagem.Size = new System.Drawing.Size(105, 18);
-            this.txtMensagem.TabIndex = 15;
-            this.txtMensagem.TabStop = false;
-            this.txtMensagem.Text = "Mensagem";
-            this.txtMensagem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 394);
+            this.ClientSize = new System.Drawing.Size(768, 394);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Consolas", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
